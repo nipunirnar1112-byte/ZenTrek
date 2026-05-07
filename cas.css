@@ -1,0 +1,223 @@
+/* General styling */
+body {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Section */
+header {
+    background-color: #f37120fb;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Availability Section */
+.availability-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.availability-section form {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+}
+
+/* Form Inputs */
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styling */
+.check-availability-btn {
+    background-color: #dd6f30b7;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.check-availability-btn:hover {
+    background-color: #ca8815de;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #bd720ff2; /* Change to your desired color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+/* Style for the guide name dropdown */
+#guide {
+    width: 100%; /* Make it take full width of its container */
+    padding: 10px; /* Add padding for better appearance */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for readability */
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text color */
+    cursor: pointer; /* Cursor to indicate clickable element */
+    margin-bottom: 20px; /* Space below the dropdown */
+}
+
+/* Style for the dropdown options */
+#guide option {
+    padding: 10px; /* Padding inside each option */
+    background-color: #f9f9f9; /* Light background for options */
+    color: #333; /* Text color for options */
+}
+
+/* Change appearance on hover */
+#guide:hover {
+    border-color: #0c0c0c; /* Change border color on hover */
+}
+
+/* Optional: Add focus styling for accessibility */
+#guide:focus {
+    outline: none; /* Remove default outline */
+    border-color: #080808; /* Highlight border on focus */
+}
+
+#availability-result {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+.footer2{
+    width: 100%;
+    height: auto;
+   padding: 100px 0  0 0;
+    text-align: center;
+    
+}
+
+
+
+#last-logo{
+    font-size: 30px;
+    font-style: italic;
+    display: inline-block;
+    color: #dfc184;
+    font-weight: bold;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ecc060;
+    border-bottom: #ea9732;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #ecc060;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.footer-bottom img {
+    margin: 0 10px;
+    height: 30px;
+}.footer2 {
+    background-color: #000000;
+    background-size: cover; /* Ensures the image covers the entire footer */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    padding: 10px 0; /* Adds padding to ensure content is not cramped */
+    color: rgba(238, 232, 232, 0.842); /* Adjusts the text color to contrast with the background */
+}
+.footer2 .footer-section h3, 
+.footer2 .footer-section ul li a {
+    color:#fff(7, 7, 7); /* Ensures links and headings are readable against the background */
+}
+
+
+
+
+/* Media Queries for Responsive Layout */
+@media (max-width: 1024px) {
+    .guide-profile {
+        width: calc(33.33% - 30px); /* 3 profiles per row on tablets */
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .guide-profile {
+        width: calc(50% - 20px); /* 2 profiles per row on smaller tablets */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .guide-profile {
+        width: 100%; /* 1 profile per row on mobile */
+        height: auto;
+    }
+}
