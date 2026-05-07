@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+nav {
+    background-color: #464544f1;
+    padding: 20px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 30px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  nav ul li a:hover {
+    color:#000000;
+  }
+
+
+
+
+
+
+  .footer2{
+    width: 100%;
+    height: auto;
+   padding: 100px 0  0 0;
+    text-align: center;
+    
+}
+
+
+
+#last-logo{
+    font-size: 30px;
+    font-style: italic;
+    display: inline-block;
+    color: #dfc184;
+    font-weight: bold;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ecc060;
+    border-bottom: #ea9732;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #ecc060;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.footer-bottom img {
+    margin: 0 10px;
+    height: 30px;
+}.footer2 {
+    background-color: #000000;
+    background-size: cover; /* Ensures the image covers the entire footer */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    padding: 10px 0; /* Adds padding to ensure content is not cramped */
+    color: rgba(238, 232, 232, 0.842); /* Adjusts the text color to contrast with the background */
+}
+.footer2 .footer-section h3, 
+.footer2 .footer-section ul li a {
+    color:#fff(7, 7, 7); /* Ensures links and headings are readable against the background */
+}
+
+
+
+
+/*overlay*/
+
+.text-overlay {
+    position:fixed; /* Allows positioning with top, bottom, left, right */
+    top: 35%; /* Center vertically */
+    left: 20%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjusts the position to be exactly centered */
+    transition: 6s ease-out;
+    text-align: left;
+    color:#f5f5f55d;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 1rem 3rem;
+}
+
+.text-overlay h1 {
+    font-size: 5em;
+    font-weight: itali;
+    font-family: 'Lucida Handwriting', cursive; /* Adjust font as needed */
+    letter-spacing: 6px;
+} 
+
+.text-overlay p {
+    font-size: 2em;
+    letter-spacing:15px;
+}
+
+
+
+/* Introduction section styles */
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Guide profiles styles */
+
+/* Container for all guide profiles */
+.guide-profiles{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:20px;
+   
+}
+.guide-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual guide profile card */
+.guide-profile {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 40px); /* 25% for 4 profiles in a row minus gap for each */
+    margin: 15px 0; /* Adjust margin between rows */
+    height: 825px;
+    position: relative; 
+    padding: 1rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-flow: column wrap;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.guide-profile:hover{
+    transform: scale(1.05);
+    background-color: #c8c3c3;
+}
+
+/* Profile image */
+.guide-profile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+/* Profile name */
+.guide-profile h2 {
+    margin: 1rem 0 0.5rem;
+}
+/* Profile description */
+.guide-profile p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color:#666;
+}
+
+/* Media Queries for Responsive Layout */
+@media (max-width: 1024px) {
+    .guide-profile {
+        width: calc(33.33% - 30px); /* 3 profiles per row on tablets */
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .guide-profile {
+        width: calc(50% - 20px); /* 2 profiles per row on smaller tablets */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .guide-profile {
+        width: 100%; /* 1 profile per row on mobile */
+        height: auto;
+    }
+}
+/* Experience, Languages, Specialty */
+.guide-info p strong {
+    color: #333;
+    font-weight: bold;
+}
+/* Profile rating */
+.guide-profile .rating {
+    margin-bottom: 1rem;
+}
+
+/* Reviews section */
+.reviews {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 15px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.reviews p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.reviews ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.reviews ul li {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.reviews ul li:before {
+    content: "“";
+    position: absolute;
+    left: 0;
+    color: #666;
+}
+
+/* Hide extra profiles by default */
+.extra-profile {
+    display: none;
+}
+
+/* Button styling */
+#see-more-btn {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #a45e08f0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#see-more-btn:hover {
+    background-color: #ae8118;
+}
+
+
+/* Main content styles */
+main {
+    padding-top:80px;
+    padding-left: 20px;
+    background-color: #f4f4f4; /* Light background for the body */
+    color: #333; /* Dark text for readability */
+}
+
+
+/* Buttons */
+.book-btn {
+   
+    margin: 20px 10px;
+    padding: 10px  ;
+    background-color: #a45e08f0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100px; /* Set a fixed width */
+    height: 50px;
+    left: 250%;
+    
+    position: relative;
+}
+
+ .book-btn:hover {
+    background-color: #ae8118;
+}

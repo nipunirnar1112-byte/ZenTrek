@@ -1,0 +1,267 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+h1{
+    text-align: center;
+}
+nav {
+    background-color: #464544f1;
+    padding: 20px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 30px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  nav ul li a:hover {
+    color:#000000;
+  }
+
+/* Container */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Review Section */
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    
+
+}
+ 
+
+
+/* Individual Review */
+.review {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    transition: transform 0.9s ease;
+}
+
+/*reviews hover */
+.review:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.stat-item:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+
+.user-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-content {
+    flex: 1;
+}
+
+.review-content h3 {
+    margin-bottom: 0.5rem;
+}
+
+.stars {
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    background-color: white;
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .stat-item .icon {
+    font-size: 40px;
+    color: #f48225; /* Orange icon color */
+    margin-bottom: 10px;
+  }
+  
+  .stat-item h2 {
+    font-size: 32px;
+    color: #1f1f1f; /* Dark text color */
+    margin-bottom: 5px;
+  }
+  
+  .stat-item h2 span {
+    font-size: 24px;
+    color: #1f1f1f;
+  }
+  
+  .stat-item p {
+    font-size: 16px;
+    color: #4a4a4a;
+  }
+  
+  h3, .stat-item h2 {
+    font-size: 1.8rem;
+    color: #444;
+}
+
+.stars {
+    font-size: 1.2rem;
+}
+
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0,0,0,0.1);
+    padding: 50px 0  0 0;
+    text-align: center;
+}
+
+
+.footer2{
+    width: 100%;
+    height: auto;
+   padding: 100px 0  0 0;
+    text-align: center;
+    
+}
+
+
+
+#last-logo{
+    font-size: 30px;
+    font-style: italic;
+    display: inline-block;
+    color: #dfc184;
+    font-weight: bold;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ecc060;
+    border-bottom: #ea9732;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #ecc060;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.footer-bottom img {
+    margin: 0 10px;
+    height: 30px;
+}.footer2 {
+    background-color: #000000;
+    background-size: cover; /* Ensures the image covers the entire footer */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    padding: 10px 0; /* Adds padding to ensure content is not cramped */
+    color: rgba(238, 232, 232, 0.842); /* Adjusts the text color to contrast with the background */
+}
+.footer2 .footer-section h3, 
+.footer2 .footer-section ul li a {
+    color:#fff(7, 7, 7); /* Ensures links and headings are readable against the background */
+}
+/* Media Queries for Responsive Layout */
+@media (max-width: 1024px) {
+    .guide-profile {
+        width: calc(33.33% - 30px); /* 3 profiles per row on tablets */
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .guide-profile {
+        width: calc(50% - 20px); /* 2 profiles per row on smaller tablets */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .guide-profile {
+        width: 100%; /* 1 profile per row on mobile */
+        height: auto;
+    }
+}
+
+

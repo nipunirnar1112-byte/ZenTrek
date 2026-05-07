@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>NEWS | ZENTrek</title>
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            background-color: #908080;
+            margin: 0;
+            
+            background-color: #fff;
+        }
+        nav {
+    background-color: #464544f1;
+    padding: 20px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 30px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  nav ul li a:hover {
+    color:#000000;
+  }
+        .news-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .news-box {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: flex;
+            width: 68%;
+            padding: 20px;
+            
+            justify-content: center;
+            transition: transform 0.9s ease;
+            margin-left: 180px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .news-box:hover {
+        transform: translateY(-30px);
+}
+        
+
+        .news-box img {
+            max-width: 250px;
+            max-height: 250px;
+            margin-right: 15px;
+            border-radius: 8px;
+        }
+
+        .news-content {
+            flex: 2;
+            padding: 10px;
+        }
+
+        .news-content h4 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+
+        .news-content p {
+            margin: 0;
+            color: #555;
+        }
+        .news-content h4{
+            font-size: 20pxpx;
+        }
+        .news-content p{
+            font-size: 18px;
+            line-height: 1.5rem;
+        }
+        .footer2{
+    width: 100%;
+    height: auto;
+   padding: 100px 0  0 0;
+    text-align: center;
+    
+}
+
+
+
+#last-logo{
+    font-size: 30px;
+    font-style: italic;
+    display: inline-block;
+    color: #dfc184;
+    font-weight: bold;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ecc060;
+    border-bottom: #ea9732;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #ecc060;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.footer-bottom img {
+    margin: 0 10px;
+    height: 30px;
+}.footer2 {
+    background-color: #000000;
+    background-size: cover; /* Ensures the image covers the entire footer */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    padding: 10px 0; /* Adds padding to ensure content is not cramped */
+    color: rgba(238, 232, 232, 0.842); /* Adjusts the text color to contrast with the background */
+}
+.footer2 .footer-section h3, 
+.footer2 .footer-section ul li a {
+    color:#fff(7, 7, 7); /* Ensures links and headings are readable against the background */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="guidebios.html">Guide Bios</a></li>
+              <li><a href="availability.php">Availability</a></li>
+              <li><a href="booking_test.html">Book now</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+          
+    </header>
+    <br> <br>
+
+    <div class="news-container">
+        <div class="news-box">
+            <img src="P4.PNG" alt="News Image 1">
+            <div class=" news-content">
+                <h4>NUWARA PERAHARA</h4>
+                <p>Sri Lanka's vibrant traditions and rich heritage were showcased at the International Bhagavad Gita Festival 2024, organized with Indian support. The event included Rangoli, art competitions, cultural performances, and intellectual discourses, attracting participants from both countries.
+                </p>
+            </div>
+        </div>
+
+        <div class="news-box">
+            <img src="nallur.jpg" alt="nallur">
+            <div class="news-content">
+                <h4>NALLUR FESTIVAL</h4>
+                <p>In Sri Lanka, the iconic Nallur Kandasamy temple in Jaffna has been drawing thousands of devotees for its annual chariot festival. The main festival ‘ther thiruvizha’ was celebrated yesterday with thousands of devotees pulling the intricately decorated chariot with the idol of Lord Murugan while chanting hymns.
+
+                    Devotees from across the world gathered at the temple to see the temple’s primary deity Murugan paraded through the streets of Jaffna. The Nallur Kandaswamy Temple is a revered Hindu temple dedicated to Lord Murugan, the god of war and victory. The annual Nallur Festival which spans 25 days features traditional music, dance, and art forms passed down through generations. The festival serves as a unifying force, bringing together Tamil communities from various backgrounds.
+                    
+                     </p>
+            </div>
+        </div>
+
+        <div class="news-box">
+            <img src="vesak.jpg" alt="vesak 3">
+            <div class="news-content">
+                <h4>VESAK FESTIVAL</h4>
+                <p>Vesak is a public holiday in Sri Lanka, celebrated for its significance in the birth, enlightenment, and mahaparinirvana of Gautama Buddha. It involves religious and cultural activities, including rituals and meditation in Buddhist temples. Communities create elaborate lanterns and decorations, while free food stalls emphasize generosity and compassion. Vesak is a time for reflection, acts of kindness, and spreading peace, and serves as a reminder of the Buddha's teachings.</p>
+            </div>
+        </div>
+
+        <div class="news-box">
+            <img src="concerto.jpg" alt="News Image 4">
+            <div class="news-content">
+                <h4>GALLE CONCERTO 2024</h4>
+                <p>Galle Concerto 2024: This prestigious event, held in the historic city of Galle, will celebrate various artistic forms, from literature to music. The festival aims to elevate Sri Lanka on the global stage by hosting internationally acclaimed artists, while local culinary and artistic talents will also be highlighted in events like the Southern Book Fair and the Matara Festival for the Arts.</p>
+            </div>
+        </div>
+    </div>
+<br><br>
+
+     <!--footer2-->
+
+<footer class="footer2">
+ 
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>GovermentHelp</h3>
+            <ul>
+                <li><a href="http://tourismmin.gov.lk/" target="_blank">Ministry of Tourism & Lands</a></li>
+                <li><a href="https://www.sltda.gov.lk/" target="_blank">Sri Lanka Tourism Development Authority</a></li>
+                <li><a href="https://www.slithm.edu.lk/" target="_blank">Sri Lanka Institute of Tourism & Hotel Management </a></li>
+                <li><a href="https://www.airport.lk/" target="_blank">Sri Lanka Airport & Aviation Services</a></li>
+                <li><a href="https://www.immigration.gov.lk/" target="_blank">Department of Immigration and Emigration</a></li>
+                
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>EmergencyCall</h3>
+            <ul>
+                <li><a href="#">Tourist Police: 0112 421 281</a></li>
+                <li><a href="#">Police Emergency (Colombo): 0112 433 333</a></li>
+                <li><a href="#">Police Emergency: 119</a></li>
+                <li><a href="#">Ambulance Service: 1990 (Suwasariya Ambulance Service)</a></li>
+                <li><a href="#">Accident Service-General Hospital-Colombo: 011-2691111</a></li>
+                <li><a href="#">Report Crimes: 011-2691500</a></li>
+                <li><a href="#">Srilankan Tourism Development Authority: 1912</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#">Facebook <ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#">Instagram <ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#">Twitter <ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="#">YouTube <ion-icon name="logo-youtube"></ion-icon></a></li>
+            </ul>
+        </div>
+       
+    </div>
+  <!--devo-->
+
+  <hr class="w-50 mt-5 mx-auto text-dark">
+  <div class="container last-footer" >
+      <div class="row">
+          <div class="col-lg-4 col-md-4 col-12 mx-auto Copyright">
+              <h4 id="last-logo">ZENTrek Agency</h4> 
+          </div>
+          <div class="col-lg-4 col-md-4 col-12 mx-auto Copyright">
+              <h4><span id="Name">ZENTrek Agency</span> © Privacy Policy</h4>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12 mx-auto Copyright">
+              <h4>Developed by <span id="Name">Group7.</span></h3>
+          </div>
+      </div>
+  </div>
+</section>
+
+</footer>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> <!--sociel media logo-->
+
+
+</body>
+</html>

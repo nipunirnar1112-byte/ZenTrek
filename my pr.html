@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Beautiful Webpage</title>
+
+    <style>
+        nav {
+    background-color: #464544f1;
+    padding: 20px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 30px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  nav ul li a:hover {
+    color:#000000;
+  }
+        /* Modal background */
+        .modal-bg {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+        }
+
+        /* Modal content */
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            color: #333;
+            overflow-y: auto;
+            max-height: 80%;
+        }
+
+        /* Close button */
+        .close-btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .footer{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0,0,0,0.1);
+    padding: 50px 0  0 0;
+    text-align: center;
+}
+
+.footer2{
+    width: 100%;
+    height: auto;
+   padding: 100px 0  0 0;
+    text-align: center;
+    
+}
+
+
+
+#last-logo{
+    font-size: 30px;
+    font-style: italic;
+    display: inline-block;
+    color: #dfc184;
+    font-weight: bold;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ecc060;
+    border-bottom: #ea9732;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #ecc060;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.footer-bottom img {
+    margin: 0 10px;
+    height: 30px;
+}.footer2 {
+    background-color: #000000;
+    background-size: cover; /* Ensures the image covers the entire footer */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    padding: 10px 0; /* Adds padding to ensure content is not cramped */
+    color: rgba(238, 232, 232, 0.842); /* Adjusts the text color to contrast with the background */
+}
+.footer2 .footer-section h3, 
+.footer2 .footer-section ul li a {
+    color:#fff(7, 7, 7); /* Ensures links and headings are readable against the background */
+}
+
+    </style>
+
+
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Fira Sans', sans-serif;; background-color: #f2f2f2; color: #333;">
+    <header>
+        <nav>
+            <ul>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="guidebios.html">Guide Bios</a></li>
+              <li><a href="availability.php">Availability</a></li>
+              <li><a href="booking_test.html">Book now</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+          
+    </header>
+    
+    
+    
+
+   <!-- Hero Section -->
+<section id="hero-section" style="text-align:center; background-size: cover; background-position: center; padding: 100px 20px;">
+    <h2 style="color: #fff; font-size: 48px; margin-bottom: 20px;">Security and Privacy</h2>
+    <p style="color: #fff; font-size: 20px; max-width: 600px; margin: 0 auto;">Enjoy your trip.</p>
+
+</section>
+
+<script>
+    const images = [
+        's11.jpg',
+        's12.jpeg',
+        's13.jpg',
+        's14.jpg',  // Add the paths to your other images here
+        's15.jpg'
+    ];
+
+    let currentIndex = 0;
+    const heroSection = document.getElementById('hero-section');
+
+    function changeBackground() {
+        heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
+        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+    }
+
+    // Change image every 5 seconds (5000 milliseconds)
+    setInterval(changeBackground, 3000);
+
+    // Initial background setting
+    changeBackground();
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+    <!-- Content Section -->
+
+    <body style="background-color: #000; color: #fff; text-align: center; font-family: Arial, sans-serif;">
+
+        
+    
+        <!-- Container to center the content -->
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 20px auto;">
+            <!-- Transport Risks in Sri Lanka -->
+            <div style="width: 300px;">
+                <img src="s16.jpg" alt="Transport Risks in Sri Lanka" style="width: 100%; height: auto;">
+                <h3 style="color: #e8cfa4; font-style: italic; margin: 15px 0;">Transport Risks in Sri Lanka</h3>
+                <a href="#" onclick="toggleModal('modal')" style="display: inline-block; padding: 10px 20px; background-color: #333; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 10px;">Read More</a>
+            </div>
+    
+            <!-- Crime -->
+            <div style="width: 300px;">
+                <img src="s17.jpg" alt="Crime" style="width: 100%; height: auto;">
+                <h3 style="color: #e8cfa4; font-style: italic; margin: 15px 0;">Crime</h3>
+                <a href="#" onclick="toggleModal('modal1')" style="display: inline-block; padding: 10px 20px; background-color: #333; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 10px;">Read More</a>
+            </div>
+    
+            <!-- Laws and Cultural Differences -->
+            <div style="width: 300px;">
+                <img src="s18.jpg" alt="Laws and Cultural Differences" style="width: 100%; height: auto;">
+                <h3 style="color: #e8cfa4; font-style: italic; margin: 15px 0;">Laws and Cultural Differences</h3>
+                <a href="#" onclick="toggleModal('modal2')" style="display: inline-block; padding: 10px 20px; background-color: #333; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 10px;">Read More</a>
+            </div>
+
+             <!-- security about the ZENTrek -->
+             <div style="width: 300px;">
+                <img src="logo1.png" alt="security about the ZENTrek" style="width: 100%; height: auto;">
+                <h3 style="color: #e8cfa4; font-style: italic; margin: 15px 0;">security about the ZENTrek</h3>
+                <a href="#" onclick="toggleModal('modal3')" style="display: inline-block; padding: 10px 20px; background-color: #333; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 10px;">Read More</a>
+            </div>
+
+            <!-- Emergency call -->
+            <div style="width: 300px;">
+                <img src="s19.png" alt="Emergency call" style="width: 100%; height: auto;">
+                <h3 style="color: #e8cfa4; font-style: italic; margin: 15px 0;">Emergency call</h3>
+                <a href="#" onclick="toggleModal('modal4')" style="display: inline-block; padding: 10px 20px; background-color: #333; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 10px;">Read More</a>
+            </div>
+
+            
+        </div>
+    
+        <!-- Modal for Transport Risks -->
+        <div class="modal-bg" id="modal" style="display:none; text-align: left;">
+            <div class="modal-content" style="margin: 50px auto; padding: 20px; background-color: #ffffff; border-radius: 10px; width: 80%; max-width: 600px;">
+                <a class="close-btn" onclick="toggleModal('modal')" style="color: #e8cfa4; cursor: pointer; float: right;">Close</a>
+                <h3 style="color: #e8cfa4;">Transport Risks in Sri Lanka</h3>
+                <p>Driving in Sri Lanka offers the freedom to explore its stunning landscapes, but it's essential to be well-prepared. Tourists can rent cars, tuk-tuks, and motorbikes, but before you hit the road, ensure that the rental company is registered with the Sri Lanka Tourist Board and holds a ‘Safe & Secure’ certificate. Here are some key tips:</p>
+                <ul>
+                    <li><strong>Insurance:</strong> Verify that you have appropriate coverage.</li>
+                    <li><strong>Vehicle Check:</strong> Ensure the vehicle is roadworthy before starting your journey.</li>
+                </ul>
+                <p>To drive a hired vehicle in Sri Lanka, you will need a 1949 International Driving Permit (IDP) and a Sri Lankan ‘Recognition Permit.’ Since you cannot obtain an IDP outside the UK, ensure you get one before your trip. Once in Sri Lanka, visit the Automobile Association of Ceylon in Colombo with your UK driving license, IDP, and two passport photos to obtain your recognition permit. Rental companies typically assist with this process.</p>
+                <p><strong>Road Safety:</strong> Sri Lankan roads, particularly in remote areas, can be in poor condition, and driving can be unpredictable. There are frequent accidents, especially at night, so stay vigilant for pedestrians and animals. Riding a motorbike can be especially hazardous. If you are involved in an accident, remain at the scene as long as it is safe. If you feel threatened, report the incident to the nearest police station.</p>
+                <p>Be aware of security checkpoints, especially on major roads. Always follow the instructions of police or military personnel. In Colombo, roads around government and military sites may be closed without notice for security reasons.</p>
+                <p><strong>Buses:</strong> Public buses in Sri Lanka are notorious for being driven at high speeds and are often poorly maintained, leading to serious accidents in recent years. While tourist buses generally adhere to better safety standards, these can vary, so choose your transport carefully.</p>
+                <p><strong>Taxis:</strong> Taxis can be booked using local and international apps, though availability may be limited outside tourist areas. Motorized rickshaws, or tuk-tuks, are widely available in towns and villages. Always agree on the fare before your journey or ensure the meter is functioning. If you feel uncomfortable with the driver or their driving, do not hesitate to switch to a different tuk-tuk or taxi.</p>
+                <p><strong>Rail Travel:</strong> Traveling by train is a scenic way to see Sri Lanka, but safety is paramount. Always stay inside the carriage when the train is moving—tragic accidents have occurred when passengers leaned out of open doors or windows. Keep a close watch on your belongings, as theft and pickpocketing have been reported.</p>
+                <p><strong>Sea Travel:</strong> Navigating Sri Lankan waters requires prior permission, especially in security zones along the coast. The risk of piracy and armed robbery remains significant in the Gulf of Aden and Indian Ocean. Yachts should avoid the High-Risk Area to reduce the risk of hijacking and hostage situations.</p>
+                <p><strong>Extreme Weather and Natural Disasters:</strong> Sri Lanka is prone to extreme weather and natural disasters. Be prepared and stay informed about how to respond effectively to such events.</p>
+            </div>
+        </div>
+    
+        <!-- Modal for Crime -->
+        <div class="modal-bg" id="modal1" style="display:none; text-align: left;">
+            <div class="modal-content" style="margin: 50px auto; padding: 20px; background-color: #ffffff; border-radius: 10px; width: 80%; max-width: 600px;">
+                <a class="close-btn" onclick="toggleModal('modal1')" style="color: #e8cfa4; cursor: pointer; float: right;">Close</a>
+                <h3 style="color: #e8cfa4;">Crime</h3>
+                <ul>
+                    <li>
+                        <strong>Protecting yourself and your belongings:</strong>
+                        <p>There’s been an increase in incidents of low-level opportunistic crime. Store your belongings as safely as possible to avoid thefts from hotels and guesthouses. Minimize the number of personal items you carry with you.</p>
+                        <p>On the street, criminals may ride past on mopeds or motorbikes and try to snatch your bag. Take care of your passport and money by keeping them in a body-belt. Carry bags on the side of you that is furthest from the road and do not place bags in the front basket of bicycles.</p>
+                        <p>Violent crimes against foreigners are rare. Gun crime is not uncommon, but usually, it is due to a dispute between different criminal groups.</p>
+                    </li>
+                    <li>
+                        <strong>Bank card fraud:</strong>
+                        <p>Bank card fraud is common. Fraudsters can steal your card details without you noticing. Use ATMs inside banks or hotels if possible, and check ATMs on the street for signs of tampering. Keep cards in sight when paying in shops and restaurants. to avoid bank</p>
+                    </li>
+                    <li>
+                        <strong>Drink spiking:</strong>
+                        <p>Be alert to the possible use of ‘date rape’ and other drugs including GHB. Do not take drinks from strangers or leave your drinks unattended. Victims of spiked drinks have been robbed and sometimes assaulted. Alcohol and drugs can reduce your vigilance, making you less in control. If you drink, know your limit. Drinks served in Sri Lanka are often stronger than in the UK as bars and hotels rarely use measures.</p>
+                    </li>
+                    <li>
+                        <strong>Sexual assault:</strong>
+                        <p>Women continue to report incidents of verbal and physical harassment by men, ranging from sexually suggestive or lewd comments to physical advances and sexual assaults.</p>
+                        <p>Incidents can happen anywhere, but the majority of reported cases take place in crowded areas including:</p>
+                        <ul>
+                            <li>markets</li>
+                            <li>bus and railway stations, or on buses</li>
+                            <li>sporting events</li>
+                            <li>tourist sites</li>
+                        </ul>
+                        <p>Take care when traveling alone or in small groups and consider carrying a personal alarm.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Modal for Laws and Cultural Differences -->
+        <div class="modal-bg" id="modal2" style="display:none; text-align: left;">
+            <div class="modal-content" style="margin: 50px auto; padding: 20px; background-color: #ffffff; border-radius: 10px; width: 80%; max-width: 600px;">
+                <a class="close-btn" onclick="toggleModal('modal2')" style="color: #e8cfa4; cursor: pointer; float: right;">Close</a>
+                <h3 style="color: #e8cfa4;">Laws and Cultural Differences</h3>
+                <ul>
+                    <li>
+                        <strong>Personal ID:</strong>
+                        <p>You must always carry your passport as an official form of identification. A copy is usually acceptable, but in some situations, you may have to produce the original at a police station within a specified time limit.</p>
+                    </li>
+                    <li>
+                        <strong>Alcohol laws and bans:</strong>
+                        <p>Police could fine you if you ignore notices prohibiting alcohol in certain public areas.</p>
+                        <p>Alcohol is not usually available on religious holidays. Drinking in public on these days could be culturally insensitive. Check locally for dates of religious holidays when this applies.</p>
+                    </li>
+                    <li>
+                        <strong>Smoking and e-cigarette bans:</strong>
+                        <p>Police could fine you if you ignore ‘no smoking’ signs in certain public areas.</p>
+                    </li>
+                    <li>
+                        <strong>Detention and prison sentences:</strong>
+                        <p>There are severe penalties for drug offenses, terrorism, and all other serious crimes. The authorities could hold you without charge indefinitely. If convicted, you may face a lengthy prison sentence.</p>
+                        <p>If you’re arrested under Sri Lanka’s Prevention of Terrorism Act, the authorities could detain you without charge awaiting a trial date.</p>
+                    </li>
+                    <li>
+                        <strong>Using cameras, binoculars, and drones in secure areas:</strong>
+                        <p>Do not fly drones near, use binoculars to look at, or take photographs of:</p>
+                        <ul>
+                            <li>military bases</li>
+                            <li>government buildings</li>
+                            <li>vehicles used by VIPs</li>
+                        </ul>
+                        <p>Check how to register and operate drones with Sri Lanka’s Civil Aviation Authority.</p>
+                    </li>
+                    <li>
+                        <strong>LGBT+ travelers:</strong>
+                        <p>Same-sex sexual activity is illegal, but we are not aware of any prosecutions.</p>
+                    </li>
+                    <li>
+                        <strong>Dress codes:</strong>
+                        <p>Nude or topless sunbathing is not allowed.</p>
+                        <p>If you enter a Buddhist temple:</p>
+                        <ul>
+                            <li>cover your legs and shoulders</li>
+                            <li>take off shoes and hats</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Religion:</strong>
+                        <p>Disrespecting Buddhist images and artifacts, or making offensive remarks about religion, is a serious offense and can lead to arrest. If you have visible tattoos of Buddha, you can be refused entry to Sri Lanka or face deportation. Do not pose for photographs standing in front of a statue of Buddha.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        
+    
+
+    <br>
+     <!-- security about the ZENTrek -->
+     <div class="modal-bg" id="modal3" style="display:none; text-align: left;">
+        <div class="modal-content" style="margin: 50px auto; padding: 20px; background-color: #ffffff; border-radius: 10px; width: 80%; max-width: 600px;">
+            <a class="close-btn" onclick="toggleModal('modal3')" style="color: #e8cfa4; cursor: pointer; float: right;">Close</a>
+            <h3 style="color: #e8cfa4;">security about the ZENTrek</h3>
+            <h1>Security at Zentrek</h1>
+    <p>For <strong>Zentrek</strong>, implementing robust security measures ensures customer trust and protects sensitive information. Here’s a comprehensive approach to enhance the security of your travel agency:</p>
+
+    <h2>1. Website and Data Security</h2>
+    <p><strong>SSL Encryption:</strong> Ensure your website has HTTPS encryption to protect data exchanged between users and Zentrek.</p>
+    <p><strong>Firewalls:</strong> Use web application firewalls (WAF) to block malicious attacks.</p>
+    <p><strong>Data Backup:</strong> Implement regular automated backups of critical data to mitigate loss from cyberattacks.</p>
+    <p><strong>Two-Factor Authentication (2FA):</strong> Offer 2FA for user accounts to prevent unauthorized access.</p>
+
+    <h2>2. Payment Security</h2>
+    <p><strong>PCI-DSS Compliance:</strong> Follow Payment Card Industry Data Security Standards to secure payment processing.</p>
+    <p><strong>Tokenization:</strong> Use tokenization to protect sensitive payment data.</p>
+    <p><strong>Fraud Detection Tools:</strong> Monitor transactions with AI-powered fraud detection systems.</p>
+
+    <h2>3. Customer Data Privacy</h2>
+    <p><strong>GDPR Compliance:</strong> If Zentrek serves European customers, ensure compliance with the General Data Protection Regulation (GDPR).</p>
+    <p><strong>Data Retention Policy:</strong> Store only essential data and delete it once it’s no longer needed.</p>
+    <p><strong>Anonymization:</strong> When analyzing trends, anonymize customer data to maintain privacy.</p>
+
+    <h2>4. Employee and Partner Security Training</h2>
+    <p><strong>Phishing Awareness:</strong> Train employees to recognize phishing attempts and other social engineering tactics.</p>
+    <p><strong>Access Control:</strong> Implement role-based access to restrict sensitive data to authorized personnel only.</p>
+    <p><strong>Vendor Vetting:</strong> Ensure third-party partners, such as tour guides and service providers, follow security protocols.</p>
+
+    <h2>5. Physical Security of Offices and Infrastructure</h2>
+    <p><strong>Access Control Systems:</strong> Use keycards or biometric systems to secure office premises.</p>
+    <p><strong>CCTV Monitoring:</strong> Install security cameras in sensitive areas for monitoring.</p>
+    <p><strong>Secure Document Disposal:</strong> Shred physical documents containing sensitive information.</p>
+
+    <h2>6. Incident Response and Recovery Plan</h2>
+    <p><strong>Incident Response Team:</strong> Form a team to handle security breaches quickly and effectively.</p>
+    <p><strong>Response Plan:</strong> Develop a step-by-step process for managing and mitigating security incidents.</p>
+    <p><strong>Communication Strategy:</strong> Inform affected customers and stakeholders promptly in case of a breach.</p>
+
+    <h2>7. Continuous Monitoring and Updates</h2>
+    <p><strong>Software Updates:</strong> Regularly update the website, booking platform, and security tools.</p>
+    <p><strong>Vulnerability Testing:</strong> Perform periodic penetration testing to identify and fix vulnerabilities.</p>
+    <p><strong>24/7 Monitoring:</strong> Use automated systems to monitor for suspicious activity in real-time.</p>
+
+    <p>By adopting these security practices, Zentrek ensures a safe and trusted environment for customers, employees, and partners. This will help the agency maintain its reputation, comply with legal requirements, and provide peace of mind to travelers.</p>
+
+        </div>
+    </div>
+
+    
+    <!-- Emergency call -->
+    <div class="modal-bg" id="modal4" style="display:none; text-align: left;">
+        <div class="modal-content" style="margin: 50px auto; padding: 20px; background-color: #ffffff; border-radius: 10px; width: 80%; max-width: 600px;">
+            <a class="close-btn" onclick="toggleModal('modal4')" style="color: #e8cfa4; cursor: pointer; float: right;">Close</a>
+            <h3 style="color: #e8cfa4;">Emergency call</h3>
+    <h1>Emergency Preparedness Plan for Zentrek</h1>
+
+    <h2>1. Emergency Types to Consider</h2>
+    <p><strong>Natural Disasters:</strong> Earthquakes, hurricanes, wildfires, floods, etc.</p>
+    <p><strong>Medical Emergencies:</strong> Traveler injury or illness during a tour.</p>
+    <p><strong>Security Threats:</strong> Terrorist attacks, protests, or theft incidents.</p>
+    <p><strong>Transportation Issues:</strong> Flight cancellations, delays, or vehicle breakdowns.</p>
+    <p><strong>Pandemics and Health Alerts:</strong> Outbreaks requiring sudden changes in itineraries.</p>
+
+    <h2>2. Pre-Trip Risk Assessment</h2>
+    <p><strong>Monitor Destinations:</strong> Stay informed about political or weather-related issues affecting destinations.</p>
+    <p><strong>Travel Alerts:</strong> Subscribe to government travel advisories (e.g., Australian Smartraveller, US Travel State Department).</p>
+    <p><strong>Local Partner Checks:</strong> Vet local tour operators, hotels, and transport providers for safety compliance.</p>
+    <p><strong>Emergency Contact Collection:</strong> Ensure all travelers provide emergency contacts before departure.</p>
+
+    <h2>3. Emergency Communication Plan</h2>
+    <p><strong>24/7 Helpline:</strong> Provide customers with a dedicated emergency number accessible at any time.</p>
+    <p><strong>Multi-Channel Communication:</strong> Use SMS, email, and apps (like WhatsApp) for rapid communication with travelers.</p>
+    <p><strong>Local Contact Network:</strong> Maintain a list of emergency contacts for local authorities, embassies, hospitals, and airlines.</p>
+    <p><strong>Emergency Updates:</strong> Provide real-time updates through your website and social media channels when necessary.</p>
+
+    <h2>4. Response Plan During an Emergency</h2>
+    <p><strong>Evacuation Procedure:</strong> Have a plan in place for evacuating travelers from high-risk zones.</p>
+    <p><strong>Medical Assistance:</strong> Partner with local medical providers for immediate support during medical emergencies.</p>
+    <p><strong>Coordination with Embassies:</strong> Assist foreign travelers with embassy contact and consular services.</p>
+    <p><strong>Flight and Accommodation Adjustments:</strong> Quickly reschedule flights and hotel bookings if disruptions occur.</p>
+
+    <h2>5. Safety Protocols for Travelers</h2>
+    <p><strong>Pre-Departure Safety Briefing:</strong> Inform travelers about safety procedures and emergency contacts.</p>
+    <p><strong>Traveler Insurance:</strong> Require or recommend comprehensive travel insurance covering medical and trip interruptions.</p>
+    <p><strong>Location Tracking (Optional):</strong> Use location-sharing services during tours to ensure traveler safety.</p>
+    <p><strong>Group Safety Guidelines:</strong> Provide rules for staying safe during tours (e.g., staying with the group, emergency meeting points).</p>
+
+    <h2>6. Staff Training for Emergencies</h2>
+    <p><strong>Emergency Response Training:</strong> Train employees on first aid, evacuation procedures, and crisis management.</p>
+    <p><strong>Role Assignments:</strong> Designate specific roles (e.g., communication officer, evacuation lead) to staff during emergencies.</p>
+    <p><strong>Regular Drills:</strong> Conduct emergency drills and scenario-based training for staff and tour guides.</p>
+
+    <h2>7. Post-Emergency Procedures</h2>
+    <p><strong>Incident Reporting:</strong> Document emergencies with detailed reports for future improvements.</p>
+    <p><strong>Customer Support:</strong> Provide counseling or assistance to affected travelers (e.g., reimbursement or rescheduling).</p>
+    <p><strong>Insurance Claims Support:</strong> Assist customers with claims for canceled trips or medical expenses.</p>
+    <p><strong>Internal Review:</strong> Evaluate the incident and update protocols to prevent future issues.</p>
+
+    <h2>8. Travel Insurance Policy</h2>
+    <p><strong>Mandatory Travel Insurance:</strong> Make travel insurance a requirement for all bookings to cover medical emergencies, cancellations, or evacuations.</p>
+    <p><strong>Partner with Insurance Providers:</strong> Offer insurance packages directly through the Zentrek website for convenience.</p>
+
+    <p>By having a <strong>comprehensive emergency plan</strong>, Zentrek can quickly respond to unexpected situations, ensuring the safety and well-being of travelers. Clear communication and proactive planning not only build customer trust but also help the agency maintain operational continuity during crises.</p>
+
+        </div>
+    </div>
+    <br>
+    <!-- security about the ZENTrek -->
+    <div class="modal-bg" id="modal2" style="display:none; text-align: left;">
+        <div class="modal-content" style="margin: 50px auto; padding: 20px; background-color: #ffffff; border-radius: 10px; width: 80%; max-width: 600px;">
+            <a class="close-btn" onclick="toggleModal('modal5')" style="color: #e8cfa4; cursor: pointer; float: right;">Close</a>
+            <h3 style="color: #e8cfa4;">security about the ZENTrek</h3>
+        </div>
+    </div>
+    <br>
+    <!-- security about the ZENTrek -->
+    <div class="modal-bg" id="modal2" style="display:none; text-align: left;">
+        <div class="modal-content" style="margin: 50px auto; padding: 20px; background-color: #ffffff; border-radius: 10px; width: 80%; max-width: 600px;">
+            <a class="close-btn" onclick="toggleModal('modal6')" style="color: #e8cfa4; cursor: pointer; float: right;">Close</a>
+            <h3 style="color: #e8cfa4;">security about the ZENTrek</h3>
+        </div>
+    </div>
+    <br>
+    <!-- security about the ZENTrek -->
+    <div class="modal-bg" id="modal2" style="display:none; text-align: left;">
+        <div class="modal-content" style="margin: 50px auto; padding: 20px; background-color: #ffffff; border-radius: 10px; width: 80%; max-width: 600px;">
+            <a class="close-btn" onclick="toggleModal('modal8')" style="color: #e8cfa4; cursor: pointer; float: right;">Close</a>
+            <h3 style="color: #e8cfa4;">security about the ZENTrek</h3>
+        </div>
+    </div>
+    <script>
+        function toggleModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = modal.style.display === 'none' || modal.style.display === '' ? 'block' : 'none';
+        }
+    </script>
+
+
+    <!--footer2-->
+
+    <footer class="footer2">
+ 
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>GovermentHelp</h3>
+                <ul>
+                    <li><a href="http://tourismmin.gov.lk/" target="_blank">Ministry of Tourism & Lands</a></li>
+                    <li><a href="https://www.sltda.gov.lk/" target="_blank">Sri Lanka Tourism Development Authority</a></li>
+                    <li><a href="https://www.slithm.edu.lk/" target="_blank">Sri Lanka Institute of Tourism & Hotel Management </a></li>
+                    <li><a href="https://www.airport.lk/" target="_blank">Sri Lanka Airport & Aviation Services</a></li>
+                    <li><a href="https://www.immigration.gov.lk/" target="_blank">Department of Immigration and Emigration</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>EmergencyCall</h3>
+                <ul>
+                    <li><a href="#">Tourist Police: 0112 421 281</a></li>
+                    <li><a href="#">Police Emergency (Colombo): 0112 433 333</a></li>
+                    <li><a href="#">Police Emergency: 119</a></li>
+                    <li><a href="#">Ambulance Service: 1990 (Suwasariya Ambulance Service)</a></li>
+                    <li><a href="#">Accident Service-General Hospital-Colombo: 011-2691111</a></li>
+                    <li><a href="#">Report Crimes: 011-2691500</a></li>
+                    <li><a href="#">Srilankan Tourism Development Authority: 1912</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook <ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="#">Instagram <ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="#">Twitter <ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href="#">YouTube <ion-icon name="logo-youtube"></ion-icon></a></li>
+                </ul>
+            </div>
+           
+        </div>
+      <!--devo-->
+    
+      <hr class="w-50 mt-5 mx-auto text-dark">
+      <div class="container last-footer" >
+          <div class="row">
+              <div class="col-lg-4 col-md-4 col-12 mx-auto Copyright">
+                  <h4 id="last-logo">ZENTrek Agency</h4> 
+              </div>
+              <div class="col-lg-4 col-md-4 col-12 mx-auto Copyright">
+                  <h4><span id="Name">ZENTrek Agency</span> © Privacy Policy</h4>
+              </div>
+              <div class="col-lg-4 col-md-4 col-12 mx-auto Copyright">
+                  <h4>Developed by <span id="Name">Group7.</span></h3>
+              </div>
+          </div>
+      </div>
+    </section>
+    
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> <!--sociel media logo-->
+    
+   
+
+</body>
+</html>
