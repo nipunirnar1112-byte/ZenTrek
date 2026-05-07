@@ -1,0 +1,209 @@
+body {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+   background-color: white;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+header {
+  
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 62px;
+    color: #000000;
+
+}
+
+.content {
+    padding: 20px;
+}
+
+.news {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 100px auto;
+    width: 80%;
+    
+}
+.news p{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+}
+.news h2 {
+    margin-top: 0;
+}
+
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0,0,0,0.1);
+    padding: 50px 0  0 0;
+    text-align: center;
+}
+
+/*underline footer*/
+
+.footer h3{
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.footer p{
+    font-size: 15px;
+    color: rgba(0,0,0,0.5);
+    font-weight: lighter;
+    padding: 0 10px;
+}
+.footer i{
+    padding: 10px;
+    font-size: 22px;
+    color: rgba(0,0,0,0.8);
+    transition: 0.6s;
+}
+
+
+.Copyright h4{
+    font-size: 18px;
+    line-height: 100px;
+}
+
+#last-logo{
+    font-size: 30px;
+    font-style: italic;
+    display: inline-block;
+    color: #443413;
+    font-weight: bold;
+}
+
+
+
+.footer2 {
+    background-color: #000000;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.rectangle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rectangle {
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+    margin: 20px;
+    transition: transform 0.9s ease;
+
+}
+
+.card:hover {
+    transform: translateY(-30px);
+}
+
+.rectangle img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    
+}
+
+.rectangle .top-text,
+.rectangle .bottom-text {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 700;
+    text-align: center;
+}
+
+.btn {
+    background-color: #e0972a9c;
+    color: #fff;
+    border-radius: 150px;
+    font-size: 1.2rem;
+    width: 7rem;
+    height: 2.5rem;
+    padding: 7px;
+
+}
+
+.btn:hover{
+    background-color: #d4a41e;
+    color: #000;
+    cursor: pointer;
+    
+}
+/* General styling */
+
+
+hr {
+    border: 1px solid #000000;
+    width: 50%;
+    margin: 2rem auto;
+}
+
+/* Footer container styling */
+.last-footer {
+    background-color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Row layout */
+.last-footer .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Column styling */
+.last-footer .Copyright {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Header inside the footer */
+.last-footer h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+}
+
+/* Hover effect for text */
+.last-footer h4 span {
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.last-footer h4 span:hover {
+    color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .last-footer .row {
+        flex-direction: column;
+    }
+}

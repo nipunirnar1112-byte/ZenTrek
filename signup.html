@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>ZENTrek | Signup</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel='stylesheet' href='signup.css'>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="guidebios.html">Guide Bios</a></li>
+              <li><a href="availability.php">Availability</a></li>
+              <li><a href="booking_test.html">Book now</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+          
+    </header>
+    <section>
+        
+        <div class="form-box">
+            <div class="form-value">
+                <form action="signup.php" method="POST">
+                    <h2>Signup</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" required>
+                        <label><i>Enter Your Email</i></label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="password" required>
+                        <label><i>Set Password</i></label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="confirm_password" required>
+                        <label><i>Confirm Password</i></label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <div class="register">
+                        <p>You are already registered <a href="login.html"><b>Sign in</b></a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+</body>
+
+</html>
